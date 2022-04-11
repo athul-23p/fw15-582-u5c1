@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import Status from './components/Status';
-// import './App.css';
+import './App.css';
 function App() {
 
   const [score,setScore] = useState(76);
@@ -13,7 +13,7 @@ function App() {
     setScore(score+val);
   }
   const handleWicketChange = () => {
-    if(wickets+1 === 13 || score > 100){
+    if(wickets+1 > 12 || score > 100){
       return;
     }
     setWicket(wickets+1);
@@ -62,7 +62,7 @@ function App() {
         </div>
       </div>
 
-      <div className="addScore">
+      <div className="addScore controls">
         Add Score
         {/* these buttons should add the respective amount in the score */}
         <button className="addScore1" onClick={() => handleScoreChange(1)}>
@@ -76,13 +76,13 @@ function App() {
         </button>
       </div>
 
-      <div className="addWicket">
+      <div className="addWicket controls">
         Add Wicket
         {/* Increase the count of wicket */}
         <button onClick={handleWicketChange}>Add 1 wicket</button>
       </div>
 
-      <div className="addBall">
+      <div className="addBall controls">
         Add ball
         {/* Increase the total number of balls thrown here. */}
         <button onClick={handleBallsChange}>Add 1</button>

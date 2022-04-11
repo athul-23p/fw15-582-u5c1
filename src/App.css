@@ -1,4 +1,38 @@
 .App {
-  text-align: center;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
 }
 
+.banner{
+  border: 2px solid red;
+  border-radius: 10px;
+}
+.banner > div{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 400px;
+}
+
+.controls{
+  width: 400px;
+  margin: 5px;
+}
+
+.controls > button{
+  background-color: dodgerblue;
+  color:white;
+  margin: 0px 5px;
+  border:none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.controls > button:hover{
+  background-color: darkviolet;
+  box-shadow: 0 0 12px 2px rgb(197, 188, 188);
+}
